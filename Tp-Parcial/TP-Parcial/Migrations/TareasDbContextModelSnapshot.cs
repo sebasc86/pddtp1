@@ -24,7 +24,7 @@ namespace TP_Parcial.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnName("Expiration")
+                        .HasColumnName("Date")
                         .HasColumnType("datetime");
 
                     b.Property<int>("ResourceId")
@@ -86,7 +86,8 @@ namespace TP_Parcial.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("State")
-                        .HasColumnType("TEXT");
+                        .HasColumnName("State")
+                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("Title")
                         .HasColumnName("Name")

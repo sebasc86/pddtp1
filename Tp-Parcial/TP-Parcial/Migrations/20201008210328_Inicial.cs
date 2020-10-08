@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TP_Parcial.Migrations
 {
-    public partial class inicial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,7 +51,7 @@ namespace TP_Parcial.Migrations
                     Name = table.Column<string>(type: "varchar(50)", nullable: true),
                     Expiration = table.Column<DateTime>(type: "datetime", nullable: false),
                     Estimate = table.Column<int>(type: "varchar(20)", nullable: false),
-                    State = table.Column<string>(nullable: true),
+                    State = table.Column<string>(type: "varchar(20)", nullable: true),
                     ResourceId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -71,7 +71,7 @@ namespace TP_Parcial.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Expiration = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime", nullable: false),
                     time = table.Column<int>(type: "integer", nullable: false),
                     ResourceId = table.Column<int>(nullable: false),
                     TaskId = table.Column<int>(nullable: false)

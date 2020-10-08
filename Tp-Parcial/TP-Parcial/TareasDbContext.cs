@@ -32,6 +32,7 @@ namespace TP_Parcial
                 t.Property(p => p.Title).HasColumnName("Name").HasColumnType("varchar(50)");
                 t.Property(p => p.Expiration).HasColumnName("Expiration").HasColumnType("datetime");
                 t.Property(p => p.Estimate).HasColumnName("Estimate").HasColumnType("varchar(20)");
+                t.Property(p => p.State).HasColumnName("State").HasColumnType("varchar(20)");
                 //t.Property(p => p.Liable).HasColumnName("ResourceId").HasColumnType("integer");
 
 
@@ -50,7 +51,7 @@ namespace TP_Parcial
             {
                 r.ToTable("Detail");
                 r.Property(p => p.Id).HasColumnName("Id");
-                r.Property(p => p.Date).HasColumnName("Expiration").HasColumnType("datetime");
+                r.Property(p => p.Date).HasColumnName("Date").HasColumnType("datetime");
                 r.Property(p => p.Time).HasColumnName("time").HasColumnType("integer");
                 //r.Property(p => p.Resource).HasColumnName("ResourceId").HasColumnType("integer");
                 //r.Property(p => p.Task).HasColumnName("TaskId").HasColumnType("integer");
